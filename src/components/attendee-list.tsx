@@ -1,17 +1,43 @@
 import { Search, MoreHorizontal, ChevronLeft, ChevronsLeft, ChevronRight, ChevronsRight } from "lucide-react"
+import  dayjs  from 'dayjs'
+import 'dayjs/locale/pt-br'
+import  relativeTime  from 'dayjs/plugin/relativeTime'
 import { IconButton } from "./icon-button"
 import { Table } from "./table/table"
 import { TableHeader } from "./table/table-header"
 import { TableCell } from "./table/table-cell"
 import { TableRow } from "./table/table-row"
 import { ChangeEvent, useState } from "react"
+import { attendees } from "../data/attendees"
+
+dayjs.extend(relativeTime)
+dayjs.locale('pt-br')
 
 export function AttendeeList(){
   
   const [search, setSearch]  = useState('')
+  const [page, setPage]  = useState(1)
+
+  const totalPages = Math.ceil(attendees.length/10)
   
   function onSearchinputChanged(event: ChangeEvent<HTMLInputElement>){
     setSearch(event.target.value);
+  }
+
+  function goToFirstPage() {
+    setPage(1);
+  }
+
+  function goToLastPage() {
+    setPage(totalPages);
+  }
+
+  function goToPreviousPage() {
+    setPage(page - 1);
+  }
+
+  function goToNextPage() {
+    setPage(page + 1);
   }
 
   return (
@@ -38,21 +64,21 @@ export function AttendeeList(){
                 </tr>
             </thead>
             <tbody>
-               {Array.from({ length:8}).map((_,i) => {
+               {attendees.slice((page - 1) * 10, page * 10).map((attendee) => {
                     return (
-                        <TableRow key={i}>
+                        <TableRow key={attendee.id}>
                             <TableCell>
                             <input type="checkbox" className="size-4 bg-black/20 rounded-md border border-white/10"/>
                             </TableCell>
-                            <TableCell >123456</TableCell>
+                            <TableCell >{attendee.id}</TableCell>
                             <TableCell >
                             <div className="flex flex-col gap-1">
-                                    <span className="font-semibold text-white">Jefferson Gonçalves</span>
-                                    <span>jeffersonqx@gmail.com</span>
+                                <span className="font-semibold text-white">{attendee.name}</span>
+                                <span>{attendee.email}</span>
                             </div> 
                             </TableCell>
-                            <TableCell>7 dias atrás</TableCell>
-                            <TableCell>3 dias atrás</TableCell>
+                            <TableCell>{dayjs().to(attendee.createdAt)}</TableCell>
+                            <TableCell>{dayjs().to(attendee.createdAt)}</TableCell>
                             <TableCell>
                                 <IconButton transparent>
                                     <MoreHorizontal className="size-4"/>
@@ -65,22 +91,22 @@ export function AttendeeList(){
             <tfoot>
                 <tr>
                     <TableCell colSpan={3}>
-                        Mostrando 10 de 228
+                        Mostrando 10 de {attendees.length}
                     </TableCell>
                     <TableCell className="text-right" colSpan={3}>
                         <div className="inline-flex items-center gap-8">
-                            <span>Página 1 de 23</span>
+                            <span>Página {page} de {totalPages}</span>
                             <div className="flex gap-1.5">
-                                <IconButton>
+                                <IconButton onClick={goToFirstPage} disabled={page === 1}>
                                     <ChevronsLeft className="size-4"/>
                                 </IconButton>
-                                <IconButton>
+                                <IconButton  onClick={goToPreviousPage} disabled={ page === 1}>
                                     <ChevronLeft className="size-4"/>
                                 </IconButton>
-                                <IconButton>
+                                <IconButton onClick={goToNextPage} disabled={page === totalPages}>
                                     <ChevronRight className="size-4"/>
                                 </IconButton>
-                                <IconButton>
+                                <IconButton onClick={goToLastPage} disabled={page === totalPages}>
                                     <ChevronsRight className="size-4"/>
                                 </IconButton>
                             </div>
