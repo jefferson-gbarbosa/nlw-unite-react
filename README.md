@@ -43,8 +43,7 @@ This application was developed during the NLW Unite event promoted by[Rocketseat
 - TypeScript
 
 ## Running the Application
-
-<a href="https://pass-in-web.netlify.app/">Project's website by clicking here.</a>
+<a href="https://pass-in-web.netlify.app/" target="_blank">Access the Project's website by clicking here.</a>
 
 ```
 https://pass-in-web.netlify.app/
