@@ -2,80 +2,52 @@
 
 Development of a front-end application in ReactJS, applying concepts of Properties, States, and Components, typing with Typescript, tooling with Vite, responsive interface with TailwindCSS, consumption of Node.js API, and utilization of URL states.
 
-This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This application was developed during the NLW Unite event promoted by[Rocketseat](https://www.rocketseat.com.br/) 
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Running the Application](#running-the-application)
+  - [Requirements](#requirements)
+  - [Clone the repository and navigate to the folder](#clone-the-repository-and-navigate-to-the-folder)
+  - [Installing necessary dependencies](#installing-necessary-dependencies)
+  - [Run local project](#run-local-project)
 - [Author](#author)
 
 
 ## Overview
 
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout for each page depending on their device's screen size
-- See hover states for all interactive elements on the page
-- See their own IP address on the map on the initial page load
-- Search for any IP addresses or domains and see the key information and location
-
 ### Screenshot
 
+#### Attendee
 ![](./src/assets/attendee.png)
+
+#### Search
 ![](./src/assets/search.png)
 
 ### Links
 
-- Solution URL: [https://github.com/jefferson-gbarbosa/ip-address-tracker](https://github.com/jefferson-gbarbosa/ip-address-tracker)
-- Live Site URL: [https://jefferson-gbarbosa.github.io/ip-address-tracker/](https://jefferson-gbarbosa.github.io/ip-address-tracker/)
+- Repository URL: [https://github.com/jefferson-gbarbosa/nlw-unite-react](https://github.com/jefferson-gbarbosa/nlw-unite-react)
+- Live Site URL: [https://pass-in-web.netlify.app/](https://pass-in-web.netlify.app/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- API
-
-## Author
-
-- Linkedin - [jefferson-gbarbosa](https://www.linkedin.com/in/jefferson-gbarbosa/)
-- Frontend Mentor - [@jefferson-gbarbosa](https://www.frontendmentor.io/profile/jefferson-gbarbosa)
-- Twitter - [@JeffGoncalves42](https://twitter.com/JeffGoncalves42)
-
-
-<h1 align="center">NLW Unite</h1>
-
-<p align="center">Development of a front-end application in ReactJS, applying concepts of Properties, States, and Components, typing with Typescript, tooling with Vite, responsive interface with TailwindCSS, consumption of Node.js API, and utilization of URL states.</p>
-
-<br />
-
-## Screenshots
-
-#### Attendee
-
-<img src="src/assets/attendee.png" width="720px">
-
-#### Search
-
-<img src="src/assets/search.png" width="720px">
-
-<br />
+- React
+- Tailwind
+- TypeScript
 
 ## Running the Application
 
-<a href="https://nlw-unite.netlify.app" target="_blank">Access the Project's website by clicking here.</a>
+[https://pass-in-web.netlify.app/](https://pass-in-web.netlify.app/) Project's website by clicking here.
 
 ```
-https://nlw-unite.netlify.app
+https://pass-in-web.netlify.app/
 ```
 
 <br />
@@ -90,7 +62,7 @@ https://nlw-unite.netlify.app
 #### Clone the repository and navigate to the folder
 
 ```
-$ git clone https://github.com/MatheusPalmieri/nlw-unite && cd nlw-unite
+$ git https://github.com/jefferson-gbarbosa/nlw-unite-react && cd nlw-unite-react
 ```
 
 #### Installing necessary dependencies
@@ -109,24 +81,11 @@ $ npm run dev or yarn dev
 
 <br />
 
-## Technologies
-
-<p>The following tools were used in the project:</p>
-
-**Frontend**: React, TypeScript and Tailwind.
-
-<br />
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-<br />
-
 ## Author
 
-Created by <b>`Matheus Palmieri`</b>👨‍💻
+- Linkedin - [jefferson-gbarbosa](https://www.linkedin.com/in/jefferson-gbarbosa/)
+- Rocketseat - [jefferson-goncalves](https://app.rocketseat.com.br/me/jefferson-goncalves-1586554311)
+- Twitter - [@JeffGoncalves42](https://twitter.com/JeffGoncalves42)
 
-<br />
 
 <p align=\"center\">📜 NLW Unite 🚀</p>
