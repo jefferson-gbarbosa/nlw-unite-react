@@ -44,7 +44,7 @@ This application was developed during the NLW Unite event promoted by[Rocketseat
 
 ## Running the Application
 
-[https://pass-in-web.netlify.app/](https://pass-in-web.netlify.app/) Project's website by clicking here.
+<a href="https://pass-in-web.netlify.app/">Project's website by clicking here.</a>
 
 ```
 https://pass-in-web.netlify.app/
